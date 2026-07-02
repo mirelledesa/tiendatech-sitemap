@@ -1,0 +1,26 @@
+
+graph TD
+    %% Nivel 1: Raíz
+    Inicio["Página de Inicio (/)"]
+
+    %% Nivel 2: Secciones Principales
+    Inicio --> Productos["Productos (/productes)"]
+    Inicio --> Categorias[" Categorías (/categories)"]
+    Inicio --> Cesta[" Cesta (/cistella)"]
+    Inicio --> Cuenta["Cuenta de Usuario (/compte)"]
+    Inicio --> Contacto[" Contacto (/contacte)"]
+
+    %% Nivel 3: Subpáginas de Productos
+    Productos --> DetalleProd["📄 Detalle de Producto (/productes/{id})"]
+
+    %% Nivel 3: Subpáginas de Categorías
+    Categorias --> Mobils[" Móviles (/categories/mobils)"]
+    Categorias --> Ordinadors[" Computadoras (/categories/ordinadors)"]
+    Categorias --> Accessoris[" Accesorios (/categories/accessoris)"]
+
+    %% Notas de decisiones (Bonus Track)
+    NotaContacto["Nota: Incluye formulario dinámico y mapa de Google Maps"]
+    Contacto -.-> NotaContacto
+
+    NotaCesta["Nota: Acceso directo al Checkout desde cualquier página"]
+    Cesta -.-> NotaCesta
